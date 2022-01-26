@@ -1,7 +1,7 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "Manuel";
+const nuevaString = 'Manuel';
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 3;
@@ -27,8 +27,8 @@ const nuevoModulo = 21 % 5 === 1;
 
 function devolverString(str) {
   // "Return" la string provista: str
-  var letra = str;
-  return letra;
+  var le = str;
+  return le;
 }
 devolverString();
 
@@ -38,7 +38,7 @@ function suma(x, y) {
   var sumando = x + y;
   return sumando;
 }
-suma (3, 6);
+suma();
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
@@ -46,7 +46,7 @@ function resta(x, y) {
   var restando = x - y;
   return restando;
 }
-resta(4, 3);
+resta();
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
@@ -54,7 +54,7 @@ function multiplica(x, y) {
   var mult = x * y;
   return mult;
 }
-multiplica(3 * 6);
+multiplica();
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
@@ -62,7 +62,7 @@ function divide(x, y) {
   var divi = x / y;
   return divi;
 }
-divide(14, 2);
+divide();
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
@@ -71,14 +71,30 @@ function sonIguales(x, y) {
   var igual = x === y;
   return igual;
 }
-sonIguales(34, 28);
+sonIguales();
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
 
+  var str1 = new String (str1);
+  var str2 = new String (str2);
+  var longitud1 = str1.length;
+  var longitud2 = str2.length;
+
+  if (longitud1 == longitud2) {
+
+    return true;
+
+  } else {
+
+    return false;
+    
+  }
+
 }
+tienenMismaLongitud();
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -258,17 +274,20 @@ retornarPerimetro();
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-
+  var tri = (base * altura)/2;
+  return tri;
 }
-
+areaDelTriangulo();
 
 function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
+  var dolar = 1.20;
+  var camb = euro * dolar;
+  return camb;
 }
-
+deEuroAdolar();
 
 function esVocal(letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
@@ -276,8 +295,22 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
+  var letr = letra;
+  if(["a", "e", "i", "o", "u"]){
+
+      return 'Es vocal';  
+
+  }else if (letr.length !== 1) {
+
+      return 'Dato incorrecto';
+
+    }else {
+    
+      return 'Dato incorrecto';
+
+  }
 }
+esVocal();
 
 
 
