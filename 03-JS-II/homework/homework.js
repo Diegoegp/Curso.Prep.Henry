@@ -84,13 +84,43 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch (color) {
+    case 'blue':
+      'This is ' + color;
+      break;
+    case 'red':
+      'This is ' + color;
+      break;
+    case 'green':
+        'This is ' + color;
+        break;
+    case 'orange':
+        'This is ' + color;
+        break;
+    default:
+        'Color not found';
+      break;
+  }
 }
+colors();
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  var number = numero; 
+
+  if (number = 10) {
+    return true;
+  } 
+  else if (number = 5){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
+esDiezOCinco ();
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
