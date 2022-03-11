@@ -5,18 +5,16 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  var intX = x;
-  var intY = y;
-  Number.isInteger(intX);
-  Number.isInteger(intY);
-  if (intX == intY) {
-    return intX | intY;
+  Number.isInteger(x);
+  Number.isInteger(y);
+  if (x === y) {
+    return x || y;
   } 
-  else if (intX > intY){
-    return intX;
+  else if (x > y){
+    return x;
   }
   else {
-    return intY;
+    return y;
     }
 }
 obtenerMayor();
@@ -25,8 +23,8 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  var edadx = edad;
-  if (edadx >= 18) {
+  
+  if (edad >= 18) {
     return "Allowed";
   } else {
     return "Not allowed";
@@ -40,11 +38,11 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-  var estado = status;
-  if (estado === 1) {
+  
+  if (status === 1) {
     return "Online"
   } 
-  else if(estado === 2 ){
+  else if(status === 2 ){
     return "Away"
   }
   else{
@@ -60,14 +58,14 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  var lengua = idioma;
-  if (lengua === "aleman") {
+  
+  if (idioma === "aleman") {
     return "Guten Tag!"
   } 
-  else if(lengua === "mandarin"){
+  else if(idioma === "mandarin"){
     return "Ni Hao!"
   }
-  else if(lengua === "ingles"){
+  else if(idioma === "ingles"){
     return "Hello!"
   }
   else {
