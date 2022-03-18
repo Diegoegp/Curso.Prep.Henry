@@ -85,6 +85,12 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var suma = 0;
+  for(var i = 0; i < numeros.length; i++) {
+    
+    suma += numeros[i];
+}
+  return suma;
 }
 
 
@@ -92,6 +98,16 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+
+  var suma = 0;
+  for(var i = 0; i < resultadosTest.length; i++) {
+    
+    suma += resultadosTest[i];
+
+}
+  var result;
+  result = suma / resultadosTest.length;
+  return result;
 }
 
 
@@ -99,19 +115,52 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-}
+  var guardar = 0;
+  for(var i = 0; i < numeros.length; i++) {
+    
+    if (numeros[i] > guardar) {
 
+      guardar = numeros[i];
+    }
+}
+return guardar;
+}
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  var reunir = 1;
+
+  if (arguments.length === 0) {
+    return 0;
+
+  } else if (arguments.length === 1){
+    return arguments[0];
+
+  }else{
+    for(var i = 0; i < arguments.length; i++) {
+
+      reunir = reunir * arguments[i];
+
+    }
+  }
+  return reunir;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  var guardar = 0;
+  for(var i = 0; i < arreglo.length; i++) {
+    
+    if (arreglo[i] > 18) {
+
+      guardar = guardar + 1;
+    }
+}
+return guardar;
 
 }
 
@@ -121,7 +170,12 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+  if (numeroDeDia === 1 || numeroDeDia === 7) {
+    return "Es fin de semana";
+  } 
+  else {
+    return "Es dia Laboral";
+  }
 } 
 
 
